@@ -26,13 +26,13 @@ async function getWsEndpoint() {
         let payloadString = response.payloadData.toString('utf8');
         
         try {
-          if (payloadString.includes('"ic":true')) {
-            payloadString = payloadString.replace(/[^\x20-\x7E]/g, '');
-            const payload = JSON.parse(payloadString);
-      
-            const { cf, mfs, ts } = payload.arguments[0];
-            console.log(cf, mfs, ts);
-            const csvData = `${cf},${mfs},${ts}\n`;
+           if (payloadString.includes('"target":"OnCrash"')) {
+          payloadString = payloadString.replace(/[^\x20-\x7E]/g, "");
+          const payload = JSON.parse(payloadString);
+
+          const { l, f, ts } = payload.arguments[0];
+          console.log(f, l, ts);
+          const csvData = `${f},${l},${ts}\n`;
             
             fs.appendFile('data.csv', csvData, (err) => {
               if (err) throw err;
