@@ -1,7 +1,7 @@
-# 1XBET Crash CF Capture
-Capture the CF Value of 1XBET Crash game using Puppeteer
+# 1XBET Crash F Capture
+Capture the F Value of 1XBET Crash game using Puppeteer
 <br /><br />
-Script Title: 1XBET Crash CF Capture. <br />
+Script Title: 1XBET Crash F Capture. <br />
 Author: Kalana Sankalpa (Anon LK).<br />
 
 ## How to use
@@ -15,4 +15,4 @@ Author: Kalana Sankalpa (Anon LK).<br />
   npm install
   node 1xbet_crash_cf_capture.js
 ```
-- The values of CF, MFS & TS will added to the data.csv file.
+- The values of F, L & TS will added to the data.csv file.
